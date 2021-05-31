@@ -15,7 +15,6 @@
             "main": "apps/my-app/src/main.ts",
             "polyfills": "apps/my-app/src/polyfills.ts",
             "tsConfig": "apps/my-app/tsconfig.app.json",
-            "aot": true,
             "assets": [
               "apps/my-app/src/favicon.ico",
               "apps/my-app/src/assets"
@@ -23,7 +22,13 @@
             "styles": [
               "apps/my-app/src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -96,7 +101,9 @@
           "options": {
             "outputPath": "dist/my-app/server",
             "main": "apps/my-app/server.ts",
-            "tsConfig": "apps/my-app/tsconfig.server.json"
+            "tsConfig": "apps/my-app/tsconfig.server.json",
+            "sourceMap": true,
+            "optimization": false
           },
           "configurations": {
             "production": {
